@@ -4,20 +4,35 @@ using System.ComponentModel;
 
 class Program
 {
-    static int AddNumbers(int n1, int n2)
+    // static int AddNumbers(int n1, int n2)
+    // {
+    //     int total = n1+n2;
+    //     // int total2 = n1*n2;
+    //     return total;
+    // }
+
+    class Circle
     {
-        int total = n1+n2;
-        // int total2 = n1*n2;
-        return total;
+        private double radius;
+
+        public Circle(double radius)
+        {
+            this.radius = radius;
+        }
     }
+
     static void Main(string[] args)
     {
-        int x = 10;
-        int y = x++;
-        Console.WriteLine($"{y}, {x}");
-        
-        int z = ++y;
-        Console.WriteLine($"{z}, {y}");
+
+        Console.WriteLine("Bonjour mes amis, comment ca va?");
+
+
+        // int x = 10;
+        // int y = x++;
+        // Console.WriteLine($"{y}, {x}");
+
+        // int z = ++y;
+        // Console.WriteLine($"{z}, {y}");
 
         // int total = AddNumbers(20, 30);
         // Console.WriteLine(total);
