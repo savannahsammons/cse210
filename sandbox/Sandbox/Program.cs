@@ -1,5 +1,6 @@
 using System;
 using System.ComponentModel;
+using System.Formats.Asn1;
 
 
 class Program
@@ -14,10 +15,41 @@ class Program
     class Circle
     {
         private double radius;
+        // public double radius;
+        // private double area;
 
         public Circle(double radius)
         {
+            Console.WriteLine("In the constructor");
             this.radius = radius;
+            // area = Math.PI * radius * radius;
+        }
+        public double GetArea()
+        {
+            return Math.PI * radius * radius;
+        }
+        public double GetDiameter()
+        {
+            return radius * 2;
+        }
+        public double GetCircumference()
+        {
+            return Math.PI * 2 * radius;
+        }
+        public double GetRadius()
+        {
+            return radius;
+        }
+        public void SetRadius(double radius)
+        {
+            this.radius = radius;
+        }
+        public void Display()
+        {
+            Console.WriteLine($"Area is: {GetArea()}");
+            Console.WriteLine($"Radius is: {GetRadius()}");
+            Console.WriteLine($"Diameter is: {GetDiameter()}");
+            Console.WriteLine($"Circumference is: {GetCircumference()}");
         }
     }
 
@@ -25,6 +57,25 @@ class Program
     {
 
         Console.WriteLine("Bonjour mes amis, comment ca va?");
+
+        int x = 10;
+
+        Circle myCircle = new Circle(x);
+        Circle myCircle2 = new Circle(x+10);
+
+        Console.WriteLine(myCircle.GetArea());
+        Console.WriteLine(myCircle2.GetArea());
+
+        Console.WriteLine(myCircle.GetCircumference());
+        Console.WriteLine(myCircle.GetDiameter());
+        Console.WriteLine(myCircle.GetRadius());
+
+        myCircle.Display();
+        myCircle.SetRadius(x+100);
+        Console.WriteLine();
+        myCircle.Display();
+
+        // myCircle.radius = 10; // Cant do this bc it is private...
 
 
         // int x = 10;
