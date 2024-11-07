@@ -5,7 +5,7 @@ class Tire
     private double radius;
     private double aspectRatio;
 
-    public Tire(double width, double radius, double aspectRatio)
+    public Tire(double width, double aspectRatio, double radius)
     {
         this.width = width;
         this.radius = radius;

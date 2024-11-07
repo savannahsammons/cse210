@@ -5,6 +5,6 @@ class Program
     {
         Car myPorsche = new Car();
 
-        myPorsche.Dispaly();
+        myPorsche.Display();
     }
 }
