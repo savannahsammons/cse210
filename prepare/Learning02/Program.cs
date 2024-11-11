@@ -4,6 +4,11 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Learning02 World!");
+        Console.Write("What is your name? ");
+        string name = Console.ReadLine();
+
+        Resume myResume = new Resume(name);
+
+        myResume.Display();
     }
 }
