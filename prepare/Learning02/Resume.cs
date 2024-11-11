@@ -14,7 +14,8 @@ class Resume
 
     public void Display()
     {
-        Console.WriteLine(name);
+        Console.WriteLine($"Name: {name}");
+        Console.WriteLine("Jobs:");
         job1.Display();
         job2.Display();
     }
