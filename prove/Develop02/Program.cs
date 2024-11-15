@@ -47,6 +47,7 @@ class Program
             JournalEntry myJournal = new JournalEntry();
 
             myJournal.CreateEntryWithPrompt();
+            
             _ifQuit = true;
         }
     }
