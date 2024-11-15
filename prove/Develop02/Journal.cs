@@ -4,11 +4,12 @@ using System.ComponentModel.DataAnnotations;
 class JournalEntry
 {
     private List <string> entries = new List<string>();
-    private Prompts prompts;
+    private string response;
+    private Prompts _prompts;
 
     public JournalEntry()
     {
-        prompts = new Prompts();
+        _prompts = new Prompts();
     }
     public JournalEntry(int date, string prompt, string response)
     {
@@ -17,6 +18,9 @@ class JournalEntry
     }
     public void CreateEntryWithPrompt()
     {
-        Console.WriteLine(prompts.NextQuestion());
+        Console.Write(DateTime.Now.ToString("M/d/yyyy "));
+        Console.WriteLine($"Prompt: {_prompts.NextQuestion()}");
+        response = Console.ReadLine();
+        entries.Add(response);
     }
 }

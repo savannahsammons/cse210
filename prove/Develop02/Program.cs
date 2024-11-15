@@ -37,10 +37,17 @@ class Program
 
     static void Main(string[] args)
     {
-        JournalEntry myJournal = new JournalEntry();
+        bool _ifQuit = false;
+        while (_ifQuit == false)
+        {
+            Menu newMenu = new Menu();
 
-        myJournal.CreateEntryWithPrompt();
-        
-        // journal program
+            newMenu.Display();
+
+            JournalEntry myJournal = new JournalEntry();
+
+            myJournal.CreateEntryWithPrompt();
+            _ifQuit = true;
+        }
     }
 }
