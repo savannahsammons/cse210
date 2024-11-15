@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 class JournalEntry
 {
+    private string date = DateTime.Now.ToString("M/d/yyyy ");
     private List <string> entries = new List<string>();
     private string response;
     private Prompts _prompts;
@@ -18,9 +19,14 @@ class JournalEntry
     }
     public void CreateEntryWithPrompt()
     {
-        Console.Write(DateTime.Now.ToString("M/d/yyyy "));
-        Console.WriteLine($"Prompt: {_prompts.NextQuestion()}");
+        Console.WriteLine($"{date}: Prompt- {_prompts.NextQuestion()}");
         response = Console.ReadLine();
         entries.Add(response);
     }
+    // public void CreateEntryWithData()
+    // {
+    //     Console.WriteLine($"{date}: Prompt- {_prompts.NextQuestion()}");
+    //     response = Console.ReadLine();
+    //     entries.Add(response);
+    // }
 }
