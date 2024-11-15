@@ -7,7 +7,6 @@ class Prompts
     {
         Random rnd = new Random();
         int randomNum = rnd.Next(0, _questions.Count());
-        // Console.WriteLine(_questions[randomNum]);
 
         return _questions[randomNum];
     }
