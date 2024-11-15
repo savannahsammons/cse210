@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.Design;
 
 class Menu
-{    
+{
     private int menuItem;
     public void Display()
     {

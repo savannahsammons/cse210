@@ -43,12 +43,17 @@ class Program
             Menu newMenu = new Menu();
 
             newMenu.Display();
+            int menuSelection = newMenu.ProcessMenu();
+            if (menuSelection == 1)
+            {
+                JournalEntry myJournal = new JournalEntry();
 
-            JournalEntry myJournal = new JournalEntry();
-
-            myJournal.CreateEntryWithPrompt();
-            
-            _ifQuit = true;
+                myJournal.CreateEntryWithPrompt();
+            }
+            else if (menuSelection == 5)
+            {
+                _ifQuit = true;
+            }
         }
     }
 }
