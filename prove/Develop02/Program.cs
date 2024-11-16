@@ -4,10 +4,14 @@ using System.IO;
 
 class Program
 {
-    private static List<JournalEntry> entries = new List<JournalEntry>();
+    public static List<JournalEntry> entries = new List<JournalEntry>();
     public void AddEntry(JournalEntry entry)
     {
         entries.Add(entry);
+    }
+    public List<JournalEntry> Entries
+    {
+        get { return entries; }
     }
     public void ReadFromFile(string filename)
     {
@@ -35,7 +39,6 @@ class Program
             }
         }
     }
-
     static void Main(string[] args)
     {
         Program program = new Program();
@@ -49,17 +52,29 @@ class Program
             int menuSelection = newMenu.ProcessMenu();
             if (menuSelection == 1)
             {
+                Console.WriteLine("hellooooooooooo");
                 JournalEntry myJournal = new JournalEntry();
 
                 myJournal.CreateEntryWithPrompt();
+                program.AddEntry(myJournal);
             }
             else if (menuSelection == 2)
             {
-                foreach(JournalEntry entry in entries)
+                Console.WriteLine("Displaying all journal entries...");
+
+                if (program.Entries.Count == 0)
                 {
-                    Console.WriteLine(entry);
+                    Console.WriteLine("No journal entries available.");
+                }
+                else
+                {
+                    foreach (JournalEntry entry in program.Entries)
+                    {
+                        Console.WriteLine(entry); // Calls JournalEntry.ToString()
+                    }
                 }
             }
+
             else if (menuSelection == 3)
             {
                 Console.WriteLine("Please enter a filename to load your data");
