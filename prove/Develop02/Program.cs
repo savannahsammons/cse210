@@ -52,7 +52,6 @@ class Program
             int menuSelection = newMenu.ProcessMenu();
             if (menuSelection == 1)
             {
-                Console.WriteLine("hellooooooooooo");
                 JournalEntry myJournal = new JournalEntry();
 
                 myJournal.CreateEntryWithPrompt();
@@ -60,8 +59,6 @@ class Program
             }
             else if (menuSelection == 2)
             {
-                Console.WriteLine("Displaying all journal entries...");
-
                 if (program.Entries.Count == 0)
                 {
                     Console.WriteLine("No journal entries available.");
@@ -74,7 +71,6 @@ class Program
                     }
                 }
             }
-
             else if (menuSelection == 3)
             {
                 Console.WriteLine("Please enter a filename to load your data");
@@ -89,7 +85,14 @@ class Program
                 string filename = Console.ReadLine();
                 program.WriteToFile(filename);
             }
-            else if (menuSelection == 5)
+            if (menuSelection == 5)
+            {
+                JournalEntry myJournal = new JournalEntry();
+
+                myJournal.CreateEntryWithMysteryPrompt();
+                program.AddEntry(myJournal);
+            }
+            else if (menuSelection == 6)
             {
                 _ifQuit = true;
             }

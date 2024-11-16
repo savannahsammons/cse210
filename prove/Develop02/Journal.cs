@@ -33,6 +33,13 @@ class JournalEntry
         entries.Add(response);
         return entries;
     }
+    public List<string> CreateEntryWithMysteryPrompt()
+    {
+        Console.WriteLine($"{date}: Prompt- What is your favorite dinosaur?");
+        response = Console.ReadLine();
+        entries.Add(response);
+        return entries;
+    }
     public string Date()
     {
         return date;
