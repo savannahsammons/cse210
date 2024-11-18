@@ -67,7 +67,7 @@ class Program
                 {
                     foreach (JournalEntry entry in program.Entries)
                     {
-                        Console.WriteLine(entry); // Calls JournalEntry.ToString()
+                        Console.WriteLine(entry);
                     }
                 }
             }
