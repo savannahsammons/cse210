@@ -3,10 +3,15 @@ using System.Security.Cryptography.X509Certificates;
 
 class Program
 {
-    private Scripture _scripture = new Scripture();
-    private bool _quitProgram;
-    static void Main(string[] args)
+    public static void Main(string[] args)
     {
+        Scripture scripture = new Scripture();
+        bool quitProgram;
+
+        while(quitProgram = false)
+        {
+            // idk yet
+        }
         public void consoleClear()
         {
             // idk
@@ -15,6 +20,5 @@ class Program
         {
             // idk
         }
-
     }
 }
