@@ -15,10 +15,6 @@ class Reference
         _chapter = chapter;
         _verse = verse;
     }
-    // public Reference()
-    // {
-    //     // idk
-    // }
     public void Display()
     {
         Console.Write($"{_book} {_chapter}:{_verse}");

@@ -10,10 +10,10 @@ class Scripture
     public List<string> ScriptureToList()
     {
         string alma32 = " And now as I said concerning faith—faith is not to have a perfect knowledge of things; therefore if ye have faith ye hope for things which are not seen, which are true.";
-        for (int i = 0;i < alma32.Count();i++)
+        string[] splitter = alma32.Split(' ');
+        foreach (string stringInArray in splitter)
         {
-            alma32.Split(" ");
-            listOfWords.Add(alma32);
+            listOfWords.Add(stringInArray);
         }
         return listOfWords;
     }
@@ -45,8 +45,11 @@ class Scripture
     }
     public void DisplayScripture()
     {
-        string alma32 = " And now as I said concerning faith—faith is not to have a perfect knowledge of things; therefore if ye have faith ye hope for things which are not seen, which are true.";
+        // string alma32 = " And now as I said concerning faith—faith is not to have a perfect knowledge of things; therefore if ye have faith ye hope for things which are not seen, which are true.";
         _reference.Display();
+        // List<string> alma32 = ScriptureToList(); // only displays System.Collections.Generic.List`1[System.String]  :(
+        List<string> newList = ScriptureToList();
+        string alma32 = string.Join( " ", newList);
         Console.WriteLine(alma32);
     }
 }
