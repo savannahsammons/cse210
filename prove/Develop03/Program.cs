@@ -6,9 +6,12 @@ class Program
 {
     static void Main(string[] args)
     {
+        Console.Clear();
         Scripture scripture = new Scripture();
         string alma32 = "And now as I said concerning faith— faith is not to have a perfect knowledge of things; therefore if ye have faith ye hope for things which are not seen, which are true.";
         List<string> listWords = scripture.ScriptureToList(alma32);
+        scripture.DisplayScripture(listWords);
+        Console.ReadLine();
         bool quitProgram = false;
 
         while(quitProgram == false)
@@ -23,7 +26,7 @@ class Program
 
             if (answer == "quit" || scripture.IsCompletelyRendered(newList) == true)
             {
-                // quitProgram = true;
+                quitProgram = true;
                 Environment.Exit(0);
             }
 
