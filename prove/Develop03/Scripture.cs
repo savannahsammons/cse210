@@ -53,11 +53,21 @@ class Scripture
         }
         return underscores;
     }
+    public List<string> ChangeWord()
+    {
+        int index = SelectRandomWord();
+        listOfWords[index] = HideWord(listOfWords[index]);
+        return listOfWords;
+    }
+    public string ListToString(List<string> listOfWords)
+    {
+        string alma32 = string.Join(" ", listOfWords);
+        return alma32;
+    }
     public void DisplayScripture()
     {
         _reference.Display();
-        List<string> newList = ScriptureToList();
-        string alma32 = string.Join( " ", newList);
+        string alma32 = ListToString(listOfWords);
         Console.WriteLine(alma32);
     }
 }
