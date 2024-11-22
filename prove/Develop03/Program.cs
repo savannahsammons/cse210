@@ -8,24 +8,21 @@ class Program
     {
         Scripture scripture = new Scripture();
         // scripture.DisplayScripture();
-        bool quitProgram = true;
+        bool quitProgram = false;
 
-        while(quitProgram == true)
+        while(quitProgram == false)
         {
             Console.Clear();
 
-            scripture.DisplayScripture();
+            List<string> newList = scripture.ChangeWords();
+
+            scripture.DisplayScripture(newList);
 
             string answer = Console.ReadLine();
 
-            for (int i=0;i<3;i++)
+            if (answer == "quit" || scripture.IsCompletelyRendered(newList) == true)
             {
-                scripture.ChangeWord();
-            }
-
-            if (answer == "quit" || scripture.IsCompletelyRendered() == true)
-            {
-                quitProgram = false;
+                quitProgram = true;
             }
         }
     }
