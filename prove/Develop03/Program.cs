@@ -7,14 +7,16 @@ class Program
     static void Main(string[] args)
     {
         Scripture scripture = new Scripture();
-        // scripture.DisplayScripture();
+        string alma32 = "And now as I said concerning faith— faith is not to have a perfect knowledge of things; therefore if ye have faith ye hope for things which are not seen, which are true.";
         bool quitProgram = false;
 
         while(quitProgram == false)
         {
             Console.Clear();
 
-            List<string> newList = scripture.ChangeWords();
+            List<string> listWords = scripture.ScriptureToList(alma32);
+
+            List<string> newList = scripture.ChangeWords(listWords);
 
             scripture.DisplayScripture(newList);
 

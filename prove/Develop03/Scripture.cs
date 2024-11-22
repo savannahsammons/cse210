@@ -8,9 +8,8 @@ class Scripture
     private Word word = new Word();
     private List<string> listOfWords = new List<string>();
 
-    public List<string> ScriptureToList()
+    public List<string> ScriptureToList(string alma32)
     {
-        string alma32 = " And now as I said concerning faith—faith is not to have a perfect knowledge of things; therefore if ye have faith ye hope for things which are not seen, which are true.";
         string[] splitter = alma32.Split(' ');
         foreach (string stringInArray in splitter)
         {
@@ -18,16 +17,15 @@ class Scripture
         }
         return listOfWords;
     }
-    public int SelectRandomWord()
+    public int SelectRandomWord(List<string> listWords)
     {
         Random rnd = new Random();
-        listOfWords = ScriptureToList();
-        int num = rnd.Next(0, listOfWords.Count());
-        string wrd = listOfWords[num];
+        int num = rnd.Next(0, listWords.Count());
+        string wrd = listWords[num];
         while (word.IsHidden(wrd) == false)
         {
-            num = rnd.Next(0, listOfWords.Count());
-            wrd = listOfWords[num];
+            num = rnd.Next(0, listWords.Count());
+            wrd = listWords[num];
         }
         return num;
     }
@@ -35,7 +33,7 @@ class Scripture
     {
         foreach (string w in newL)
         {
-            if (w[0] != '_')
+            if (word.IsHidden(w) == false)
             {
                 return false;
             }
@@ -55,14 +53,14 @@ class Scripture
         }
         return underscores;
     }
-    public List<string> ChangeWords()
+    public List<string> ChangeWords(List<string> listWords)
     {
         for(int i=0;i<3;i++)
         {
-            int index = SelectRandomWord();
-            listOfWords[index] = HideWord(listOfWords[index]);
+            int index = SelectRandomWord(listWords);
+            listWords[index] = HideWord(listWords[index]);
         }
-        return listOfWords;
+        return listWords;
     }
     public string ListToString(List<string> scriptureList)
     {
@@ -73,6 +71,6 @@ class Scripture
     {
         _reference.Display();
         string alma32 = ListToString(newList);
-        Console.WriteLine(alma32);
+        Console.WriteLine($" {alma32}");
     }
 }
