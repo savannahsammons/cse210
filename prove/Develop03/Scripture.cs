@@ -4,10 +4,14 @@ using System.Runtime.ExceptionServices;
 
 class Scripture
 {
-    private Reference _reference = new Reference("Alma","32","21");
+    private Reference _reference;
     private Word word = new Word();
     private List<string> listOfWords = new List<string>();
 
+    public void SetReference(string book, string chapter, string verse)
+    {
+        _reference = new Reference(book, chapter,verse);
+    }
     public List<string> ScriptureToList(string alma32)
     {
         string[] splitter = alma32.Split(' ');

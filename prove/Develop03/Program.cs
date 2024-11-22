@@ -10,7 +10,24 @@ class Program
         Scripture scripture = new Scripture();
         bool quitProgram = false;
         string alma32 = "And now as I said concerning faith— faith is not to have a perfect knowledge of things; therefore if ye have faith ye hope for things which are not seen, which are true.";
-        List<string> listWords = scripture.ScriptureToList(alma32);
+        string nephi2 = "And my father dwelt in a tent.";
+        List<string> listWords;
+
+        Console.WriteLine("Which scripture would you like to pick?");
+        Console.WriteLine("0: Alma 32:21");
+        Console.WriteLine("1: 1 Nephi 2:15");
+        string memorize = Console.ReadLine();
+        if (memorize == "0")
+        {
+            listWords = scripture.ScriptureToList(alma32);
+            scripture.SetReference("Alma", "32", "21");
+        }
+        else
+        {
+            listWords = scripture.ScriptureToList(nephi2);
+            scripture.SetReference("1 Nephi", "2", "15");
+        }
+
         scripture.DisplayScripture(listWords);
         string ans = Console.ReadLine();
         if (ans == "quit")
