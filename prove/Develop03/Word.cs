@@ -5,11 +5,11 @@ class Word
     {
         if (word[0] == '_')
         {
-            return false;
+            return true;
         }
         else
         {
-            return true;
+            return false;
         }
     }
 }

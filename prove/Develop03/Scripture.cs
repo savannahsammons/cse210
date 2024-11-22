@@ -22,7 +22,7 @@ class Scripture
         Random rnd = new Random();
         int num = rnd.Next(0, listWords.Count());
         string wrd = listWords[num];
-        while (word.IsHidden(wrd) == false)
+        while (word.IsHidden(wrd) == true)
         {
             num = rnd.Next(0, listWords.Count());
             wrd = listWords[num];
@@ -36,10 +36,6 @@ class Scripture
             if (word.IsHidden(w) == false)
             {
                 return false;
-            }
-            else
-            {
-                continue;
             }
         }
         return true;
