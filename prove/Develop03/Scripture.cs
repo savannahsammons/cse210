@@ -17,22 +17,32 @@ class Scripture
         }
         return listOfWords;
     }
-    public void SelectRandomWord()
+    public int SelectRandomWord()
     {
         Random rnd = new Random();
-        for(int i = 0;i<=3;i++)
+        int num = rnd.Next(0, listOfWords.Count());
+        string wrd = listOfWords[num];
+        while (word.IsHidden(wrd) == true)
         {
-            string wrds = listOfWords[i];
-            int num = rnd.Next(0, listOfWords.Count());
-            if (word.IsHidden(wrds) == true)
+            num = rnd.Next(0, listOfWords.Count());
+            wrd = listOfWords[num];
+        }
+        return num;
+    }
+    public bool IsCompletelyRendered()
+    {
+        foreach (string w in listOfWords)
+        {
+            if (w[0] != '_')
             {
-                // cant choose word
+                return false;
+            }
+            else
+            {
+                continue;
             }
         }
-    }
-    public void IsCompletelyRendered()
-    {
-        // bool
+        return true;
     }
     public string HideWord(string word)
     {
@@ -45,9 +55,7 @@ class Scripture
     }
     public void DisplayScripture()
     {
-        // string alma32 = " And now as I said concerning faith—faith is not to have a perfect knowledge of things; therefore if ye have faith ye hope for things which are not seen, which are true.";
         _reference.Display();
-        // List<string> alma32 = ScriptureToList(); // only displays System.Collections.Generic.List`1[System.String]  :(
         List<string> newList = ScriptureToList();
         string alma32 = string.Join( " ", newList);
         Console.WriteLine(alma32);

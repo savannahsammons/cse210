@@ -7,12 +7,13 @@ class Program
     {
         Scripture scripture = new Scripture();
         scripture.DisplayScripture();
-        // bool quitProgram;
+        bool quitProgram = true;
 
-        // while(quitProgram = false)
-        // {
-        //     // idk yet
-        // }
+        while(quitProgram == true)
+        {
+            // idk yet
+        }
+
         // public void Display()
         // {
         //     // idk
