@@ -1,5 +1,5 @@
 
-class BreathingActivity
+class BreathingActivity : Activity
 {
     
 }

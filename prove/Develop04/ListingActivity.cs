@@ -1,5 +1,5 @@
 
-class ListingActivity
+class ListingActivity : Activity
 {
     
 }
