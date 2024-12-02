@@ -11,5 +11,6 @@ class Program
         act.Spinner();
 
         ba.DisplayGetReady();
+        ba.DisplayBreathing();
     }
 }

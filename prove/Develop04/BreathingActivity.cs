@@ -1,4 +1,6 @@
 
+using System.Xml;
+
 class BreathingActivity : Activity
 {
     private string _name;
@@ -23,7 +25,7 @@ class BreathingActivity : Activity
     public void DisplayGetReady()
     {
         Console.WriteLine("Get Ready...");
-        for (int i = 0;i < 5;i++)
+        for (int i = 0;i < 3;i++)
         {
             Spinner();
         }
@@ -31,8 +33,14 @@ class BreathingActivity : Activity
 
     public void DisplayBreathing()
     {
-        Console.WriteLine("Breathe in...");
+        Console.WriteLine("");
+        Console.Write("Breathe in...");
 
-        Console.WriteLine("Now breathe out...");
+        Timer();
+
+        Console.WriteLine("");
+        Console.Write("Now breathe out...");
+
+        Timer();
     }
 }

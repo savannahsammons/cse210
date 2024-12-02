@@ -1,4 +1,7 @@
 
+using System.Globalization;
+using System.Runtime.ExceptionServices;
+
 class Activity
 {
     private string _name;
@@ -13,14 +16,21 @@ class Activity
     public void Timer()
     {
         DateTime startTime = DateTime.Now;
-        DateTime futureTime = startTime.AddSeconds(_duration);
+        DateTime futureTime = startTime.AddSeconds(5);
 
-        Thread.Sleep(3000);
+        Thread.Sleep(5000);
 
         DateTime currentTime = DateTime.Now;
         if (currentTime < futureTime)
         {
+            int j = 5;
             Console.WriteLine("We have not arrived at our future time yet...");
+            for (int i=0; i <= 5; i++)
+            {
+                Thread.Sleep(1000);
+                Console.WriteLine(j);
+                j--;
+            }
         }
     }
     public void Spinner()
