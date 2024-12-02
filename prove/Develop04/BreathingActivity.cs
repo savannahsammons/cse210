@@ -16,14 +16,23 @@ class BreathingActivity : Activity
 
         Console.Write("What is duration? ");
         _duration = int.Parse(Console.ReadLine());
+
+        Console.Clear();
     }
 
     public void DisplayGetReady()
     {
         Console.WriteLine("Get Ready...");
-        for (int i = 0;i < _duration;i++)
+        for (int i = 0;i < 5;i++)
         {
             Spinner();
         }
+    }
+
+    public void DisplayBreathing()
+    {
+        Console.WriteLine("Breathe in...");
+
+        Console.WriteLine("Now breathe out...");
     }
 }
