@@ -9,9 +9,16 @@ class Activity
     private string _description;
     private int _duration;
 
-    public void DisplayMenu()
+    public Activity(string name, string description, int duration)
     {
-        Console.WriteLine("This will be the menu...");
+        _name = name;
+        _description = description;
+        int number = int.Parse(Console.ReadLine());
+        _duration = duration;
+    }
+    public void DisplayTitle()
+    {
+        Console.WriteLine("");
     }
 
     public void Timer()

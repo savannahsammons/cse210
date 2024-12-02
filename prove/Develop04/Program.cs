@@ -6,8 +6,11 @@ class Program
     {
         Activity act = new Activity();
         BreathingActivity ba = new BreathingActivity();
+        ReflectingActivity ra = new ReflectingActivity();
+        ListingActivity la = new ListingActivity();
 
-        act.DisplayMenu();
+        Console.WriteLine("This will be the menu...");
+
         act.Spinner();
 
         ba.DisplayGetReady();
