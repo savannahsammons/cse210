@@ -20,6 +20,8 @@ class Activity
     public int FindDuration()
     {
         int timeWanted = int.Parse(Console.ReadLine());
+        // int _duration = int.Parse(Console.ReadLine());
+
         return timeWanted;
     }
     public void DisplayTitle()
@@ -31,6 +33,15 @@ class Activity
         Console.Write("How long, in seconds, would you like for your session? ");
         // int timeWanted = int.Parse(Console.ReadLine());
         _duration = FindDuration();
+    }
+
+    public void DisplayGetReady()
+    {
+        Console.WriteLine("Get Ready...");
+        for (int i = 0;i < 3;i++)
+        {
+            Spinner();
+        }
     }
 
     public void Timer()

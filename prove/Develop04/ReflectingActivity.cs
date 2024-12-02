@@ -4,8 +4,8 @@ using System.Xml;
 
 class ReflectingActivity : Activity
 {
-    public ReflectingActivity(): base("Reflecting", "This activity will help you reflect on times ...", 50){}
-    
+    public ReflectingActivity(): base("Reflecting", "This activity will help you reflect on times ...", 1000000){}
+
     public void Prompt()
     {
         Console.WriteLine("--Name a time when ... --");
