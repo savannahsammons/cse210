@@ -1,4 +1,5 @@
 
+using System.Diagnostics;
 using System.Globalization;
 using System.Runtime.ExceptionServices;
 
@@ -17,18 +18,16 @@ class Activity
     {
         DateTime startTime = DateTime.Now;
         DateTime futureTime = startTime.AddSeconds(5);
-
-        Thread.Sleep(5000);
-
         DateTime currentTime = DateTime.Now;
+
         if (currentTime < futureTime)
         {
             int j = 5;
-            Console.WriteLine("We have not arrived at our future time yet...");
             for (int i=0; i <= 5; i++)
             {
+                Console.Write(j);
                 Thread.Sleep(1000);
-                Console.WriteLine(j);
+                Console.Write("\b \b");
                 j--;
             }
         }
@@ -58,5 +57,11 @@ class Activity
         Thread.Sleep(500);
 
         Console.Write("\b \b");
+    }
+
+    public void DisplayOutro()
+    {
+        Console.WriteLine("Well done!");
+        Console.WriteLine("you finished blank...");
     }
 }
