@@ -1,14 +1,7 @@
 
 class ListingActivity : Activity
 {
-    private string _name;
-    private string _description;
-    private int _duration;
-
-    public ListingActivity()
-    {
-        // idk
-    }
+    public ListingActivity(): base("Listing", "Description of listing...", 50){}
 
     public void DisplayActivityThing()
     {

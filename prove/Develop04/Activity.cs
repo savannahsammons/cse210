@@ -13,12 +13,24 @@ class Activity
     {
         _name = name;
         _description = description;
-        int number = int.Parse(Console.ReadLine());
+        // int number = int.Parse(Console.ReadLine());
         _duration = duration;
+    }
+
+    public int FindDuration()
+    {
+        int timeWanted = int.Parse(Console.ReadLine());
+        return timeWanted;
     }
     public void DisplayTitle()
     {
+        Console.WriteLine($"Welcome to the {_name} Actvity!");
         Console.WriteLine("");
+        Console.WriteLine(_description);
+        Console.WriteLine("");
+        Console.Write("How long, in seconds, would you like for your session? ");
+        // int timeWanted = int.Parse(Console.ReadLine());
+        _duration = FindDuration();
     }
 
     public void Timer()

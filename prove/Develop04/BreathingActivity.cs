@@ -3,24 +3,7 @@ using System.Xml;
 
 class BreathingActivity : Activity
 {
-    private string _name;
-    private string _description;
-    private int _duration;
-
-    public BreathingActivity()
-    {
-        // idk yet
-    }
-
-    public void DisplayTitle()
-    {
-        Console.WriteLine("Welcome to the Breathing Activity");
-
-        Console.Write("What is duration? ");
-        _duration = int.Parse(Console.ReadLine());
-
-        Console.Clear();
-    }
+    public BreathingActivity(): base("Breathing", "This is the description...", 1000){}
 
     public void DisplayGetReady()
     {
