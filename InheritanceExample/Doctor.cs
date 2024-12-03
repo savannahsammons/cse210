@@ -12,6 +12,6 @@ class Doctor : Person
     }
     public override string GetPersonInfo()
     {
-        return $"I am a doctor, my favorite weapon is: {_tools}, My info is {base.GetPersonInfo()}";
+        return $"I am a doctor, my favorite weapon is: {_tools}, My info is: {base.GetPersonStats}";
     }
 }

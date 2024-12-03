@@ -10,9 +10,9 @@ class Program
     }
     public static void Main(string[] args)
     {
-        Person Bob = new ("Bob", "Billy", 37);
+        // Person Bob = new ("Bob", "Billy", 37);
 
-        Console.WriteLine(Bob.GetPersonInfo());
+        // Console.WriteLine(Bob.GetPersonInfo());
 
         Doctor doctorBob = new Doctor("Bob", "Budge", 37, "Hack Saw");
         Console.WriteLine(doctorBob.GetDoctorInformation());
@@ -26,11 +26,11 @@ class Program
         Console.WriteLine(policeDoug.GetPoliceInformation());
         Console.WriteLine(policeDoug.GetPersonInfo());
 
-        SetPersonFirstName(Bob, "Bobby");
-        Console.WriteLine(Bob.GetPersonInfo());
+        // SetPersonFirstName(Bob, "Bobby");
+        // Console.WriteLine(Bob.GetPersonInfo());
 
         List<Person> people = new List<Person>();
-        people.Add(Bob);
+        // people.Add(Bob);
         people.Add(doctorBob);
         people.Add(policeDoug);
 
