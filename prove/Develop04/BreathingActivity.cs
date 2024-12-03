@@ -11,11 +11,7 @@ class BreathingActivity : Activity
     }
     public void DisplayBreathing()
     {
-        DateTime startTime = DateTime.Now;
-        DateTime futureTime = startTime.AddSeconds(_duration);
-
-        DateTime currentTime = DateTime.Now;
-        while (currentTime < futureTime)
+        for (int i = 0; i< _duration/12;i++)
         {
             Console.WriteLine("");
             Console.Write("Breathe in...");

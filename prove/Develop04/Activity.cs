@@ -92,6 +92,10 @@ class Activity
     public void DisplayOutro()
     {
         Console.WriteLine("Well done!");
-        Console.WriteLine("you finished blank...");
+        Spinner();
+        Spinner();
+        Console.WriteLine($"You have completed another {_duration} seconds of the breathing activity.");
+        Spinner();
+        Spinner();
     }
 }
