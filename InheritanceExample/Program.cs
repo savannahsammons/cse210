@@ -23,11 +23,11 @@ class Program
         Console.WriteLine(policeDoug.GetPersonInfo());
 
         SetPersonFirstName(policeDoug, "Doug the second");
-        Console.WriteLine(policeDoug.GetPoliceInformation);
-        Console.WriteLine(policeDoug.GetPersonInfo);
+        Console.WriteLine(policeDoug.GetPoliceInformation());
+        Console.WriteLine(policeDoug.GetPersonInfo());
 
         SetPersonFirstName(Bob, "Bobby");
-        Console.WriteLine(Bob.GetPersonInfo);
+        Console.WriteLine(Bob.GetPersonInfo());
 
         List<Person> people = new List<Person>();
         people.Add(Bob);
