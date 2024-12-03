@@ -1,7 +1,7 @@
 
 class ListingActivity : Activity
 {
-    private List<string> prompts = new List<string>{"-- When have you felt the Holy Ghost this month? --", "-- When have you felt the Savior's love this week? --", "-- When have you served others today? --"};
+    private List<string> prompts = new List<string>{"-- When have you felt the Holy Ghost this month? --", "-- When have you felt the Saviors love this week? --", "-- When have you served others today? --"};
     private List<string> responses = new List<string>{};
     public ListingActivity(): base("Listing", "This activity will help you reflect on the good things in your life by having you list as many things you can in a certain area."){}
 
@@ -12,7 +12,9 @@ class ListingActivity : Activity
 
     private string GetRandomPrompt()
     {
-        string prompt = prompts[0];
+        Random rnd = new Random();
+        int num = rnd.Next(0, prompts.Count());
+        string prompt = prompts[num];
         return prompt;
     }
 
@@ -31,6 +33,7 @@ class ListingActivity : Activity
         while (true)
         {
             DateTime currentTime = DateTime.Now;
+            Console.Write("> ");
             string response = Console.ReadLine();
             responses.Add(response);
             

@@ -14,24 +14,21 @@ class ReflectingActivity : Activity
         _duration = duration; // Set the duration dynamically
     }
 
-    private List<string> GetRandomPrompt()
+    private string GetRandomPrompt()
     {
-
-        return _prompts;
+        Random rnd = new Random();
+        int num = rnd.Next(0, _prompts.Count());
+        string _prompt = _prompts[num];
+        return _prompt;
     }
-
-    public void Prompt()
-    {
-
-        Console.WriteLine(GetRandomPrompt());
-    }
-
     public void DisplayReflecting()
     {
-        Console.WriteLine("prompt: ...");
+        Console.WriteLine("Consider the following prompt:");
+        Console.WriteLine("");
 
-        Prompt();
+        Console.WriteLine(GetRandomPrompt());
 
+        Console.WriteLine("");
         Console.WriteLine("When you have something in mind press enter to continue.");
         Console.ReadLine();
 
@@ -47,13 +44,13 @@ class ReflectingActivity : Activity
     {
         for (int i = 0; i< _duration/15;i++)
         {
+            Console.WriteLine("");
             Console.Write(_questions[i]);
             for (int j = 0; j < 5; j++)
             {
                 Spinner();
-                Spinner();
-                Spinner();
             }
         }
+        Console.WriteLine("");
     }
 }
