@@ -7,13 +7,13 @@ class Program
     {
         // Activity act = new Activity();
         // BreathingActivity ba = new BreathingActivity();
-        ReflectingActivity ra = new ReflectingActivity();
-        ListingActivity la = new ListingActivity();
+        // ReflectingActivity ra = new ReflectingActivity();
+        // ListingActivity la = new ListingActivity();
 
         while (true)
         {
             Console.Clear();
-            
+
             Console.WriteLine("");
             Console.WriteLine("Menu Options:");
             Console.WriteLine("  1. Start Breathing Activity");
@@ -43,11 +43,24 @@ class Program
             }
             if (menuChoice == 2)
             {
-                // reflecting activity
+                ReflectingActivity ra = new ReflectingActivity();
+                ra.DisplayTitle();
+                int duration = ra.FindDuration();
+                ra.SetDuration(duration);
+                ra.DisplayGetReady();
+                ra.DisplayReflecting();
+                ra.DisplayQuestions();
+                ra.DisplayOutro();
             }
             if (menuChoice == 3)
             {
-                // listing activity
+                ListingActivity la = new ListingActivity();
+                la.DisplayTitle();
+                int duration = la.FindDuration();
+                la.SetDuration(duration);
+                la.DisplayGetReady();
+                la.DisplayListing();
+                la.DisplayOutro();
             }
             if (menuChoice == 4)
             {
