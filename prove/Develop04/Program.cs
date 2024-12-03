@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics;
 
 class Program
 {
@@ -11,6 +12,8 @@ class Program
 
         while (true)
         {
+            Console.Clear();
+            
             Console.WriteLine("");
             Console.WriteLine("Menu Options:");
             Console.WriteLine("  1. Start Breathing Activity");
@@ -19,6 +22,8 @@ class Program
             Console.WriteLine("  4. Quit");
             Console.Write("Select a choice from the menu: ");
             int menuChoice = int.Parse(Console.ReadLine());
+
+            Console.Clear();
 
             // Console.WriteLine("Get Ready...");
             // for (int i = 0;i < 3;i++)
@@ -30,8 +35,11 @@ class Program
             {
                 BreathingActivity ba = new BreathingActivity();
                 ba.DisplayTitle();
+                int duration = ba.FindDuration();
+                ba.SetDuration(duration);
                 ba.DisplayGetReady();
                 ba.DisplayBreathing();
+                ba.DisplayOutro();
             }
             if (menuChoice == 2)
             {

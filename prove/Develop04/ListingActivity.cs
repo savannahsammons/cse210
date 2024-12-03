@@ -1,7 +1,7 @@
 
 class ListingActivity : Activity
 {
-    public ListingActivity(): base("Listing", "Description of listing...", 50){}
+    public ListingActivity(): base("Listing", "Description of listing..."){}
 
     public void DisplayActivityThing()
     {

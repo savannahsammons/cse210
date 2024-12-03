@@ -7,14 +7,14 @@ class Activity
 {
     private string _name;
     private string _description;
-    private int _duration;
+    protected int _duration;
 
-    public Activity(string name, string description, int duration)
+    public Activity(string name, string description)
     {
         _name = name;
         _description = description;
         // int number = int.Parse(Console.ReadLine());
-        _duration = duration;
+        _duration = 0;
     }
 
     public int FindDuration()
@@ -32,7 +32,7 @@ class Activity
         Console.WriteLine("");
         Console.Write("How long, in seconds, would you like for your session? ");
         // int timeWanted = int.Parse(Console.ReadLine());
-        _duration = FindDuration();
+        // return timeWanted;
     }
 
     public void DisplayGetReady()

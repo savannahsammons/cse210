@@ -3,20 +3,32 @@ using System.Xml;
 
 class BreathingActivity : Activity
 {
-    public BreathingActivity(): base("Breathing", "This is the description...", 1000){}
+    public BreathingActivity(): base("Breathing", "This activity will help you relax by walking you through breathing in and out slowly. Clear your mind and focus on your breathing."){}
 
+    public void SetDuration(int duration)
+    {
+        _duration = duration; // Set the duration dynamically
+    }
     public void DisplayBreathing()
     {
-        Console.WriteLine("");
-        Console.Write("Breathe in...");
+        DateTime startTime = DateTime.Now;
+        DateTime futureTime = startTime.AddSeconds(_duration);
 
-        Timer();
+        DateTime currentTime = DateTime.Now;
+        while (currentTime < futureTime)
+        {
+            Console.WriteLine("");
+            Console.Write("Breathe in...");
 
-        Console.WriteLine("");
-        Console.Write("Now breathe out...");
+            Timer();
 
-        Timer();
+            Console.WriteLine("");
+            Console.Write("Now breathe out...");
 
-        Console.WriteLine("");
+            Timer();
+
+            Console.WriteLine("");
+            // Console.WriteLine("");
+        }
     }
 }

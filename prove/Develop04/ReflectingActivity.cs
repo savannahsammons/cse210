@@ -4,7 +4,7 @@ using System.Xml;
 
 class ReflectingActivity : Activity
 {
-    public ReflectingActivity(): base("Reflecting", "This activity will help you reflect on times ...", 1000000){}
+    public ReflectingActivity(): base("Reflecting", "This activity will help you reflect on times ..."){}
 
     public void Prompt()
     {
