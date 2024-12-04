@@ -1,0 +1,5 @@
+
+class SimpleGoal : Goal
+{
+    // idk
+}
