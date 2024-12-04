@@ -13,7 +13,7 @@ class Shape
 
     public string GetColor()
     {
-        string clr = "blue";
+        string clr = _color;
         return clr;
     }
 
