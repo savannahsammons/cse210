@@ -1,5 +1,8 @@
 
 class ChecklistGoal : Goal
 {
-    // idk
+    public ChecklistGoal(string name, string description, int points) : base(name, description, points)
+    {
+        // idk
+    }
 }

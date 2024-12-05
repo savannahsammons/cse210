@@ -6,7 +6,12 @@ class Goal
     private int _points;
     private bool _status; // maybe...
 
-    // public virtual CreateNewGoal() : Goal
+    public Goal(string name, string description, int points)
+    {
+        _name = name;
+        _description = description;
+        _points = points;
+    }
     public virtual void DisplayGoals()
     {
         // idk yet

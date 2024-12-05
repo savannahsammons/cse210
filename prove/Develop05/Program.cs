@@ -12,10 +12,13 @@ class Program
         menu1.DisplayMainMenu();
         int goalType = menu1.SetAndGetMenuChoice();
 
-        if (goalType == 1)
+        while (true)
         {
-            // Console.WriteLine("1st choice");
-            menu1.TypeOfGoalMenu();
+            if (goalType == 1)
+            {
+                // Console.WriteLine("1st choice");
+                menu1.TypeOfGoalMenu();
+            }
         }
     }
 }
