@@ -5,4 +5,9 @@ class EternalGoal : Goal
     {
         // idk
     }
+
+    public override void RecordEvent()
+    {
+        base.RecordEvent();
+    }
 }

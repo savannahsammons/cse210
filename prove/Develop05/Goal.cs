@@ -25,4 +25,13 @@ class Goal
         return false;
     }
 
+    public virtual void RunGoal()
+    {
+        // idk
+    }
+    public virtual void ListGoal(string filename)
+    {
+        // idk
+    }
+
 }
