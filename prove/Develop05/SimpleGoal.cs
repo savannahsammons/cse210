@@ -20,9 +20,9 @@ class SimpleGoal : Goal
     //     // return newString;
     // }
 
-    public override void ListGoal(string filename)
+    public string[] ListGoal(string filename)
     {
-        base.ListGoal(filename);
+        // base.ListGoal(filename);
         string[] lines = System.IO.File.ReadAllLines(filename);
         foreach (string line in lines)
             {
@@ -32,5 +32,11 @@ class SimpleGoal : Goal
                 string description = parts[1];
                 string points = parts[2];
             }
+        return lines;
+    }
+
+    public override void RunGoal()
+    {
+        throw new NotImplementedException();
     }
 }

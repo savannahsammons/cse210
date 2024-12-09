@@ -6,7 +6,6 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Console.WriteLine("Hello Develop05 World!");
         Menu menu1 = new Menu();
         List<Goal> goals = new List<Goal>();
 
@@ -70,7 +69,7 @@ class Program
             }
             if (menuChoice == 2)
             {
-                Console.WriteLine(goals);
+                // DisplayGoals();
             }
             if (menuChoice == 3)
             {
@@ -82,15 +81,15 @@ class Program
             }
             if (menuChoice == 4)
             {
-                string[] lines = System.IO.File.ReadAllLines(filename);
-                foreach (string line in lines)
-                {
-                    string[] parts = line.Split("|");
+                // string[] lines = System.IO.File.ReadAllLines(filename);
+                // foreach (string line in lines)
+                // {
+                //     string[] parts = line.Split("|");
 
-                    string name = parts[0];
-                    string description = parts[1];
-                    string points = parts[2];
-                }
+                //     string name = parts[0];
+                //     string description = parts[1];
+                //     string points = parts[2];
+                // }
             }
             if (menuChoice == 5)
             {

@@ -1,5 +1,5 @@
 
-class Goal
+abstract class Goal
 {
     private string _name;
     private string _description;
@@ -12,9 +12,15 @@ class Goal
         _description = description;
         _points = points;
     }
-    public virtual void DisplayGoals()
+    public virtual void DisplayGoals(List<Goal> goals)
     {
-        // idk yet
+        int i = 0;
+        Console.WriteLine("The goals are:");
+        foreach (Goal g in goals)
+        {
+            i++;
+            Console.WriteLine($"{i}. [{IsComplete}] {_name} ({_description})");
+        }
     }
     public virtual void RecordEvent()
     {
@@ -25,13 +31,15 @@ class Goal
         return false;
     }
 
-    public virtual void RunGoal()
-    {
-        // idk
-    }
-    public virtual void ListGoal(string filename)
-    {
-        // idk
-    }
+    public abstract void RunGoal();
+    // public virtual string[] ListGoal(string filename)
+    // {
+    //     // idk
+    // }
+
+    // public virtual string ListAllGoals()
+    // {
+
+    // }
 
 }
