@@ -86,10 +86,14 @@ class Program
             }
             if (menuChoice == 3)
             {
+                Console.WriteLine("Goals saved!");
                 using (StreamWriter outputFile = new StreamWriter(filename))
                 {
                     outputFile.WriteLine(totalPoints);
-                    outputFile.WriteLine(goals);
+                    foreach (Goal g in goals)
+                    {
+                        outputFile.WriteLine($"{g.GetName}|{g.GetDescription}|{g.GetPoints}");
+                    }
                 }
             }
             if (menuChoice == 4)

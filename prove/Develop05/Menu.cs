@@ -2,11 +2,7 @@
 class Menu
 {
     int _menuChoice;
-
-    // public Menu(int menuChoice)
-    // {
-    //     _menuChoice = menuChoice;
-    // }
+    
     public void DisplayMainMenu()
     {
         Console.WriteLine("Menu Options:");

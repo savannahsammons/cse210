@@ -18,6 +18,18 @@ abstract class Goal
     {
         return _status;
     }
+    public string GetName()
+    {
+        return _name;
+    }
+    public string GetDescription()
+    {
+        return _description;
+    }
+    public int GetPoints()
+    {
+        return _points;
+    }
     public virtual void DisplayGoals(List<Goal> goals)
     {
         int i = 0;
