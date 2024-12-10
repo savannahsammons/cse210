@@ -1,16 +1,13 @@
 
 class ChecklistGoal : Goal
 {
+    private int _times;
+    private int _bonusPoints;
     public ChecklistGoal(string name, string description, int points, int times, int bonusPoints) : base(name, description, points)
     {
-        // idk
+        _times = times;
+        _bonusPoints = bonusPoints;
     }
-
-    public override void RecordEvent()
-    {
-        base.RecordEvent();
-    }
-
     public string[] ListGoal(string filename)
     {
         // base.ListGoal(filename);
@@ -29,6 +26,16 @@ class ChecklistGoal : Goal
     }
 
     public override void RunGoal()
+    {
+        throw new NotImplementedException();
+    }
+
+    public override void ListGoal()
+    {
+        throw new NotImplementedException();
+    }
+
+    public override void RecordEvent()
     {
         throw new NotImplementedException();
     }

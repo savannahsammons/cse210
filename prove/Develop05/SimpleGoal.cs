@@ -5,14 +5,7 @@ using System.IO.Enumeration;
 class SimpleGoal : Goal
 {
     public SimpleGoal(string name, string description, int points) : base (name, description, points)
-    {
-        // _name = name;
-    }
-
-    public override void RecordEvent()
-    {
-        base.RecordEvent();
-    }
+    {}
 
     // public override string ToString()
     // {
@@ -35,7 +28,21 @@ class SimpleGoal : Goal
         return lines;
     }
 
+    public override void DisplayGoals(List<Goal> goals)
+    {
+        base.DisplayGoals(goals);
+    }
     public override void RunGoal()
+    {
+        throw new NotImplementedException();
+    }
+
+    public override void ListGoal()
+    {
+        throw new NotImplementedException();
+    }
+
+    public override void RecordEvent()
     {
         throw new NotImplementedException();
     }

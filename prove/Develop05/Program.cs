@@ -9,15 +9,17 @@ class Program
         Menu menu1 = new Menu();
         List<Goal> goals = new List<Goal>();
 
+        // Goals bigGoals = new Goals();
+
         int totalPoints = 0;
 
         string filename = "goals.txt";
 
-        menu1.DisplayMainMenu();
-        int menuChoice = menu1.SetAndGetMenuChoice();
-
         while (true)
         {
+            menu1.DisplayMainMenu();
+            int menuChoice = menu1.SetAndGetMenuChoice();
+
             if (menuChoice == 1)
             {
                 // Console.WriteLine("1st choice");
@@ -25,6 +27,7 @@ class Program
                 int goalType = menu1.SetAndGetMenuChoice();
                 if (goalType == 1)
                 {
+                    // bigGoals.PromptUser();
                     Console.Write("What is the name of your goal? ");
                     string goalName = Console.ReadLine();
                     Console.Write("What is a short description of it? ");
@@ -33,10 +36,8 @@ class Program
                     int goalPoints = int.Parse(Console.ReadLine());
                     SimpleGoal simp = new SimpleGoal(goalName, goalDescription, goalPoints);
                     goals.Add(simp);
-
-                    Console.WriteLine($"You have {totalPoints} points.");
                 }
-                if (goalType == 2)
+                else if (goalType == 2)
                 {
                     Console.Write("What is the name of your goal? ");
                     string goalName = Console.ReadLine();
@@ -49,7 +50,7 @@ class Program
 
                     Console.WriteLine($"You have {totalPoints} points.");
                 }
-                if (goalType == 3)
+                else if (goalType == 3)
                 {
                     Console.Write("What is the name of your goal? ");
                     string goalName = Console.ReadLine();
@@ -69,7 +70,19 @@ class Program
             }
             if (menuChoice == 2)
             {
-                // DisplayGoals();
+                int i = 0;
+                string ifComplete = " ";
+                Console.WriteLine("The goals are:");
+                foreach (Goal g in goals)
+                {
+                    bool currentStatus = g.GetStatus();
+                    if (currentStatus == true)
+                    {
+                        ifComplete = "x";
+                    }
+                    i++;
+                    Console.WriteLine($"{i}. [{ifComplete}] {g}");
+                }
             }
             if (menuChoice == 3)
             {
@@ -81,15 +94,17 @@ class Program
             }
             if (menuChoice == 4)
             {
-                // string[] lines = System.IO.File.ReadAllLines(filename);
-                // foreach (string line in lines)
-                // {
-                //     string[] parts = line.Split("|");
+                string[] lines = System.IO.File.ReadAllLines(filename);
+                foreach (string line in lines)
+                {
+                    string[] parts = line.Split("|");
 
-                //     string name = parts[0];
-                //     string description = parts[1];
-                //     string points = parts[2];
-                // }
+                    string name = parts[0];
+                    string description = parts[1];
+                    string points = parts[2];
+                    string times = parts[3];
+                    string bonusPoints = parts[4];
+                }
             }
             if (menuChoice == 5)
             {

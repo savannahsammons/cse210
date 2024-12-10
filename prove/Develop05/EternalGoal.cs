@@ -5,12 +5,6 @@ class EternalGoal : Goal
     {
         // idk
     }
-
-    public override void RecordEvent()
-    {
-        base.RecordEvent();
-    }
-
     public string[] ListGoal(string filename)
     {
         // base.ListGoal(filename);
@@ -27,6 +21,16 @@ class EternalGoal : Goal
     }
 
     public override void RunGoal()
+    {
+        throw new NotImplementedException();
+    }
+
+    public override void ListGoal()
+    {
+        throw new NotImplementedException();
+    }
+
+    public override void RecordEvent()
     {
         throw new NotImplementedException();
     }
