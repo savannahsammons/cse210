@@ -25,8 +25,11 @@ class Menu
     {
         Console.WriteLine("Which animal would you like to add to your farm?");
         Console.WriteLine("1. Pig");
-        Console.WriteLine("1. Cow");
-        Console.WriteLine("4. Quit");
+        Console.WriteLine("2. Cow");
+        Console.WriteLine("3. Goat");
+        Console.WriteLine("4. Chicken");
+        Console.WriteLine("5. Alpaca");
+        Console.WriteLine("6. Quit");
         int choice = int.Parse(MenuChoice());
         return choice;
     }

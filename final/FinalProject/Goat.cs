@@ -1,7 +1,8 @@
 
 class Goat : Animal
 {
-    public Goat(string name, string sound) : base(name, sound)
+    private List<string> goatNames = ["", "", "", "", ""];
+    public Goat(string type, string name, string sound) : base(type, name, sound)
     {
         // idk
     }

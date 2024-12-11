@@ -1,7 +1,8 @@
 
 class Pig : Animal
 {
-    public Pig(string name, string sound) : base(name, sound)
+    private List<string> pigNames = ["Miss Piggy", "Porkchop", "Chubby", "Pumbaa", "Buttons"];
+    public Pig(string type, string name, string sound) : base(type, name, sound)
     {
         // idk yet
     }
