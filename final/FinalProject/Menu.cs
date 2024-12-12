@@ -11,7 +11,7 @@ class Menu
         Console.WriteLine("What would you like to do?");
         Console.WriteLine("1. Buy an animal");
         Console.WriteLine("2. Show my animals");
-        Console.WriteLine("4. Quit");
+        Console.WriteLine("3. Quit");
         int choice = int.Parse(MenuChoice());
         return choice;
     }
@@ -29,7 +29,6 @@ class Menu
         Console.WriteLine("3. Goat");
         Console.WriteLine("4. Chicken");
         Console.WriteLine("5. Alpaca");
-        Console.WriteLine("6. Quit");
         int choice = int.Parse(MenuChoice());
         return choice;
     }

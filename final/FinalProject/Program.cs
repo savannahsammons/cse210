@@ -4,25 +4,41 @@ class Program
 {
     static void Main(string[] args)
     {
-        Menu mainMenu = new Menu();
+        Menu menu1 = new Menu();
         List<Animal> animals = new List<Animal>();
 
         while(true)
         {
-            int animalChoice = mainMenu.DisplayMainMenu();
-            if (animalChoice == 1)
+            int mainMenuChoice = menu1.DisplayMainMenu();
+            if (mainMenuChoice == 1)
             {
-                Pig piggy = new Pig("pig", "Piggy", "oink");
-                animals.Add(piggy);
-                Console.WriteLine("Here is your new Pig, Piggy!");
+                int animalChoice = menu1.DisplayAnimalMenu();
+                if (animalChoice == 1)
+                {
+                    // Pig pig1 = new Pig();
+                    // int nameChoice = menu1.DisplayAnimalNames();
+                }
+                if (animalChoice == 2)
+                {
+                    
+                }
+                if (animalChoice == 3)
+                {
+                    
+                }
+                if (animalChoice == 4)
+                {
+                    
+                }
+                if (animalChoice == 5)
+                {
+                    
+                }
             }
-            if (animalChoice == 2)
+            if (mainMenuChoice == 2)
             {
-                Cow bessy = new Cow("cow","Bessy", "moo");
-                animals.Add(bessy);
-                Console.WriteLine("Here is your new Cow, Bessy!");
             }
-            if (animalChoice == 6)
+            if (mainMenuChoice == 3)
             {
                 break;
             }
