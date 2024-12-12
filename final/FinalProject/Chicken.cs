@@ -1,7 +1,7 @@
 
 class Chicken : Animal
 {
-    private List<string> chickenNames = ["", "", "", "", ""];
+    // private List<string> chickenNames = ["", "", "", "", ""];
     public Chicken(string type, string name, string sound) : base(type, name, sound)
     {
         // idk

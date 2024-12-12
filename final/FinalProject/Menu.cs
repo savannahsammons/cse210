@@ -4,10 +4,16 @@ using System.Xml.Serialization;
 
 class Menu
 {
-    
-    public int DisplayMainMenu()
+    public string DisplayFirstMenu()
     {
         Console.WriteLine("=== Welcome to the Farm Simulation! ===\n");
+        Console.Write("What is your name? ");
+        string playerName = Console.ReadLine();
+        return playerName;
+    }
+
+    public int DisplayMainMenu()
+    {
         Console.WriteLine("What would you like to do?");
         Console.WriteLine("1. Buy an animal");
         Console.WriteLine("2. Show my animals");
