@@ -7,5 +7,11 @@ class Store
     private List<string> alpacaNames = ["Peanut", "Butter", "Jam", "Cuzko", "Pacha"];
     private List<string> cowNames = ["Daisy", "Bessie", "Angus", "Farnando", "Betsy"];
 
-    
+    public void GetPigNames()
+    {
+        foreach (string name in pigNames)
+        {
+            Console.WriteLine();
+        }
+    }
 }
