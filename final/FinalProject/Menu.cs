@@ -4,6 +4,12 @@ using System.Xml.Serialization;
 
 class Menu
 {
+    private string MenuChoice()
+    {
+        Console.Write("> ");
+        string choice = Console.ReadLine();
+        return choice;
+    }
     public string DisplayFirstMenu()
     {
         Console.WriteLine("=== Welcome to the Farm Simulation! ===\n");
@@ -19,12 +25,6 @@ class Menu
         Console.WriteLine("2. Show my animals");
         Console.WriteLine("3. Quit");
         int choice = int.Parse(MenuChoice());
-        return choice;
-    }
-    private string MenuChoice()
-    {
-        Console.Write("> ");
-        string choice = Console.ReadLine();
         return choice;
     }
     public int DisplayAnimalMenu()

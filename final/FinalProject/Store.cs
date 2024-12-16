@@ -1,6 +1,7 @@
 
 class Store
 {
+    private bool _isTaken;
     private List<string> pigNames = ["Miss Piggy", "Porkchop", "Chubby", "Pumbaa", "Buttons"];
     private List<string> goatNames = ["Billy", "Buttercup", "Ramsey", "Lambchop", "Bo Peep"];
     private List<string> chickenNames = ["Clucky", "Hen Solo", "Nugget", "Chicken Little", "Albert Eggstein"];
@@ -11,7 +12,35 @@ class Store
     {
         foreach (string name in pigNames)
         {
-            Console.WriteLine();
+            Console.WriteLine(name);
+        }
+    }
+    public void GetGoatNames()
+    {
+        foreach (string name in goatNames)
+        {
+            Console.WriteLine(name);
+        }
+    }
+    public void GetCowNames()
+    {
+        foreach (string name in cowNames)
+        {
+            Console.WriteLine(name);
+        }
+    }
+    public void GetChickenNames()
+    {
+        foreach (string name in chickenNames)
+        {
+            Console.WriteLine(name);
+        }
+    }
+    public void GetAlpacaNames()
+    {
+        foreach (string name in alpacaNames)
+        {
+            Console.WriteLine(name);
         }
     }
 }
