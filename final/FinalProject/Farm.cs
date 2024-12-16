@@ -10,9 +10,12 @@ class Farm
 
     public void DisplayAnimals()
     {
+        Console.WriteLine("");
         foreach (Animal animal in farmAnimals)
         {
-            Console.WriteLine(animal);
+            string type = animal.GetAnimalType();
+            string name = animal.GetAnimalName();
+            Console.WriteLine($"{name} (the {type})");
         }
     }
 }

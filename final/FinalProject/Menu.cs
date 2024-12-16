@@ -29,7 +29,7 @@ class Menu
     }
     public int DisplayAnimalMenu()
     {
-        Console.WriteLine("Which animal would you like to add to your farm?");
+        Console.WriteLine("\nWhich animal would you like to add to your farm?");
         Console.WriteLine("1. Pig");
         Console.WriteLine("2. Cow");
         Console.WriteLine("3. Goat");
@@ -40,7 +40,7 @@ class Menu
     }
     public string DisplayAnimalNames(string animal, List<string> names)
     {
-        Console.WriteLine($"Which {animal} would you like to pick?");
+        Console.WriteLine($"\nWhich {animal} would you like to pick?");
         foreach(string name in names)
         {
             Console.WriteLine(name);

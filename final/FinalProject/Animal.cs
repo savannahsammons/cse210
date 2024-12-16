@@ -15,16 +15,16 @@ abstract class Animal
 
     public abstract void MakeSound();
 
-    private int PickRandomNum()
+    public string GetAnimalType()
     {
-        Random rand = new Random();
-        int randomNum = rand.Next(0,5);
-        return randomNum;
+        return _type;
     }
-    public string PickName(List<string> names)
+    public string GetAnimalName()
     {
-        int randomNum = PickRandomNum();
-        string name = names[randomNum];
-        return name;
+        return _name;
+    }
+    public string GetAnimalSound()
+    {
+        return _sound;
     }
 }
