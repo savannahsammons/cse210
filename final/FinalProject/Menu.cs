@@ -38,14 +38,15 @@ class Menu
         int choice = int.Parse(MenuChoice());
         return choice;
     }
-    public int DisplayAnimalNames(Animal animal, List<string> names)
+    public string DisplayAnimalNames(string animal, List<string> names)
     {
         Console.WriteLine($"Which {animal} would you like to pick?");
         foreach(string name in names)
         {
             Console.WriteLine(name);
         }
-        int choice = int.Parse(MenuChoice());
+        Console.Write("> ");
+        string choice = Console.ReadLine();
         return choice;
     }
 }

@@ -1,46 +1,83 @@
 
 class Store
 {
-    private bool _isTaken;
     private List<string> pigNames = ["Miss Piggy", "Porkchop", "Chubby", "Pumbaa", "Buttons"];
     private List<string> goatNames = ["Billy", "Buttercup", "Ramsey", "Lambchop", "Bo Peep"];
     private List<string> chickenNames = ["Clucky", "Hen Solo", "Nugget", "Chicken Little", "Albert Eggstein"];
     private List<string> alpacaNames = ["Peanut", "Butter", "Jam", "Cuzko", "Pacha"];
     private List<string> cowNames = ["Daisy", "Bessie", "Angus", "Farnando", "Betsy"];
 
-    public void GetPigNames()
+    public List<string> GetPigNames()
     {
-        foreach (string name in pigNames)
-        {
-            Console.WriteLine(name);
-        }
+        return pigNames;
     }
-    public void GetGoatNames()
+    public List<string> GetGoatNames()
     {
-        foreach (string name in goatNames)
-        {
-            Console.WriteLine(name);
-        }
+        return goatNames;
     }
-    public void GetCowNames()
+    public List<string> GetCowNames()
     {
-        foreach (string name in cowNames)
-        {
-            Console.WriteLine(name);
-        }
+        return cowNames;
     }
-    public void GetChickenNames()
+    public List<string> GetChickenNames()
     {
-        foreach (string name in chickenNames)
-        {
-            Console.WriteLine(name);
-        }
+        return chickenNames;
     }
-    public void GetAlpacaNames()
+    public List<string> GetAlpacaNames()
     {
-        foreach (string name in alpacaNames)
+        return alpacaNames;
+    }
+    public void RemoveName (string animal, string animalName)
+    {
+        if (animal == "pig")
         {
-            Console.WriteLine(name);
+            foreach (string name in pigNames)
+            {
+                if (name == animalName)
+                {
+                    pigNames.Remove(name);
+                }
+            }
+        }
+        if (animal == "cow")
+        {
+            foreach (string name in cowNames)
+            {
+                if (name == animalName)
+                {
+                    cowNames.Remove(name);
+                }
+            }
+        }
+        if (animal == "goat")
+        {
+            foreach (string name in goatNames)
+            {
+                if (name == animalName)
+                {
+                    goatNames.Remove(name);
+                }
+            }
+        }
+        if (animal == "chicken")
+        {
+            foreach (string name in chickenNames)
+            {
+                if (name == animalName)
+                {
+                    chickenNames.Remove(name);
+                }
+            }
+        }
+        if (animal == "alpaca")
+        {
+            foreach (string name in alpacaNames)
+            {
+                if (name == animalName)
+                {
+                    alpacaNames.Remove(name);
+                }
+            }
         }
     }
 }
