@@ -1,15 +1,10 @@
 
 class Alpaca : Animal
-{
-    // private List<string> alpacaNames = ["", "", "", "", ""];
-    
-    public Alpaca(string type, string name, string sound) : base(type, name, sound)
-    {
-        // idk
-    }
+{    
+    public Alpaca(string type, string name, string sound) : base(type, name, sound){}
 
     public override void MakeSound()
     {
-        throw new NotImplementedException();
+        Console.WriteLine(GetAnimalSound());
     }
 }

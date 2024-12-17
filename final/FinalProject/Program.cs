@@ -62,6 +62,11 @@ class Program
             if (mainMenuChoice == 2)
             {
                 playersFarm.DisplayAnimals();
+                Console.WriteLine("Which one would you like to pet?");
+                Console.Write("> ");
+                string namePicked = Console.ReadLine();
+                string animalSound = playersFarm.PetAnimal(namePicked);
+                Console.WriteLine($"{namePicked} said {animalSound}!");
             }
             if (mainMenuChoice == 3)
             {

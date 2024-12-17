@@ -4,6 +4,7 @@ using System.Xml.Serialization;
 
 class Menu
 {
+    Farm myFarm = new Farm();
     private string MenuChoice()
     {
         Console.Write("> ");
@@ -20,10 +21,11 @@ class Menu
 
     public int DisplayMainMenu()
     {
-        Console.WriteLine("What would you like to do?");
+        Console.WriteLine("\nWhat would you like to do?");
         Console.WriteLine("1. Buy an animal");
         Console.WriteLine("2. Show my animals");
         Console.WriteLine("3. Quit");
+        Console.WriteLine("Enter a number...");
         int choice = int.Parse(MenuChoice());
         return choice;
     }
@@ -35,6 +37,7 @@ class Menu
         Console.WriteLine("3. Goat");
         Console.WriteLine("4. Chicken");
         Console.WriteLine("5. Alpaca");
+        Console.WriteLine("Enter a number...");
         int choice = int.Parse(MenuChoice());
         return choice;
     }
@@ -45,6 +48,7 @@ class Menu
         {
             Console.WriteLine(name);
         }
+        Console.WriteLine("Enter a name...");
         Console.Write("> ");
         string choice = Console.ReadLine();
         return choice;

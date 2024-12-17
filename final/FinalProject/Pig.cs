@@ -1,13 +1,9 @@
 
 class Pig : Animal
 {
-    // private List<string> pigNames = ["Miss Piggy", "Porkchop", "Chubby", "Pumbaa", "Buttons"];
-    public Pig(string type, string name, string sound) : base(type, name, sound)
-    {
-        // idk yet
-    }
+    public Pig(string type, string name, string sound) : base(type, name, sound){}
     public override void MakeSound()
     {
-        throw new NotImplementedException();
+        Console.WriteLine(GetAnimalSound());
     }
 }

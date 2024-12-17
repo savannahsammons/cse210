@@ -31,51 +31,52 @@ class Store
     {
         if (animal == "pig")
         {
-            foreach (string name in pigNames)
+            for (int i = pigNames.Count - 1; i >= 0; i--)
             {
-                if (name == animalName)
+                if (pigNames[i] == animalName)
                 {
-                    pigNames.Remove(name);
+                    pigNames.RemoveAt(i);
                 }
             }
+
         }
         if (animal == "cow")
         {
-            foreach (string name in cowNames)
+            for (int i = cowNames.Count - 1; i >= 0; i--)
             {
-                if (name == animalName)
+                if (cowNames[i] == animalName)
                 {
-                    cowNames.Remove(name);
+                    cowNames.RemoveAt(i);
                 }
             }
         }
         if (animal == "goat")
         {
-            foreach (string name in goatNames)
+            for (int i = goatNames.Count - 1; i >= 0; i--)
             {
-                if (name == animalName)
+                if (goatNames[i] == animalName)
                 {
-                    goatNames.Remove(name);
+                    goatNames.RemoveAt(i);
                 }
             }
         }
         if (animal == "chicken")
         {
-            foreach (string name in chickenNames)
+            for (int i = chickenNames.Count - 1; i >= 0; i--)
             {
-                if (name == animalName)
+                if (chickenNames[i] == animalName)
                 {
-                    chickenNames.Remove(name);
+                    chickenNames.RemoveAt(i);
                 }
             }
         }
         if (animal == "alpaca")
         {
-            foreach (string name in alpacaNames)
+            for (int i = alpacaNames.Count - 1; i >= 0; i--)
             {
-                if (name == animalName)
+                if (alpacaNames[i] == animalName)
                 {
-                    alpacaNames.Remove(name);
+                    alpacaNames.RemoveAt(i);
                 }
             }
         }

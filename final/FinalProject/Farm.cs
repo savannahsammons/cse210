@@ -18,4 +18,15 @@ class Farm
             Console.WriteLine($"{name} (the {type})");
         }
     }
+    public string PetAnimal(string animalName)
+    {
+        foreach(Animal animal in farmAnimals)
+        {
+            if (animal.GetAnimalName() == animalName)
+            {
+                return animal.GetAnimalSound();
+            }
+        }
+        return "This animal does not exist in your farm";
+    }
 }
